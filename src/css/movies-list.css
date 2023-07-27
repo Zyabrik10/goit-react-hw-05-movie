@@ -1,0 +1,44 @@
+.movies-form {
+  margin-bottom: 40px;
+
+  display: flex;
+  justify-content: center;
+  height: 30px;
+}
+
+.movies-form input {
+  border: none;
+
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+  width: 100%;
+  max-width: 400px;
+
+  background: transparent;
+
+  border: 2px solid #666;
+  border-right: none;
+
+  padding: 0 10px;
+
+  font-size: 20px;
+  color: #eee;
+}
+
+.movies-form input:focus {
+  outline: 1px solid #aaa;
+}
+
+.movies-form button {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: block;
+  height: 100%;
+  background: #eee;
+  padding: 0 10px;
+
+  color: #222;
+
+  text-transform: capitalize;
+}
