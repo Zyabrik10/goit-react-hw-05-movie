@@ -31,11 +31,13 @@ export default function MovieCast() {
       });
   }, [id]);
 
-  return loadFilms ? (
-    <Loader />
-  ) : isNothingFound ? (
-    <NothingFound message="There is no info😢" />
-  ) : (
-    <MovieCastList credits={credits} />
-  );
+  function showCredits() {
+    return isNothingFound ? (
+      <NothingFound message="There is no info😢" />
+    ) : (
+      <MovieCastList credits={credits} />
+    );
+  }
+
+  return loadFilms ? <Loader /> : showCredits();
 }

@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
 import { fetchFilms } from 'js/fetch-film-functions/fetchFilms';
 import { useSearchParams } from 'react-router-dom';
-import { FilmsList } from '../FilmsList/FilmsList';
 import { Loader } from 'components/Loader/Loader';
-import NothingFound from 'components/NothingFound/NothingFound';
+import { showFilms } from 'js/fetch-film-functions/showFilms';
 
 export const Movies = () => {
   const [query, setQuery] = useState('');
@@ -59,13 +58,7 @@ export const Movies = () => {
           <input type="text" name="query" placeholder="Batman..." />
           <button className="global-button">search</button>
         </form>
-        {loadFilms ? (
-          <Loader />
-        ) : isNothingFound ? (
-          <NothingFound message="Nothing found😢" />
-        ) : (
-          <FilmsList films={films} />
-        )}
+        {loadFilms ? <Loader /> : showFilms(isNothingFound, films)}
       </div>
     </section>
   );

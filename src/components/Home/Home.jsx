@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import { fetchTopFilms } from 'js/fetch-film-functions/fetchTopFilms';
-import { FilmsList } from '../FilmsList/FilmsList';
-import NothingFound from 'components/NothingFound/NothingFound';
 import { Loader } from 'components/Loader/Loader';
+import { showFilms } from 'js/fetch-film-functions/showFilms';
 
 export const Home = () => {
   const [topFilms, setTopFilms] = useState([]);
@@ -33,13 +32,7 @@ export const Home = () => {
     <section>
       <div className="container">
         <h2 className="sec-title global-title">Trending today</h2>
-        {loadFilms ? (
-          <Loader />
-        ) : isNothingFound ? (
-          <NothingFound message="Nothing found😢" />
-        ) : (
-          <FilmsList films={topFilms} />
-        )}
+        {loadFilms ? <Loader /> : showFilms(isNothingFound, topFilms)}
       </div>
     </section>
   );

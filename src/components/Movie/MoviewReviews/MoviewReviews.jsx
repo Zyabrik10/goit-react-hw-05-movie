@@ -31,11 +31,13 @@ export default function MovieReviews() {
       });
   }, [id]);
 
-  return loadFilms ? (
-    <Loader />
-  ) : isNothingFound ? (
-    <NothingFound message="There is no info😢" />
-  ) : (
-    <MovieReviewsList reviews={reviews} />
-  );
+  function showCredits() {
+    return isNothingFound ? (
+      <NothingFound message="There is no info😢" />
+    ) : (
+      <MovieReviewsList reviews={reviews} />
+    );
+  }
+
+  return loadFilms ? <Loader /> : showCredits();
 }
