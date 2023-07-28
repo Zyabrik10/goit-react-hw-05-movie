@@ -8,6 +8,13 @@ export default function PageNotFound() {
       >
         Page is not found 😭
       </p>
+      <p
+        style={{
+          textAlign: 'center',
+        }}
+      >
+        Execution code: 404
+      </p>
     </>
   );
 }
