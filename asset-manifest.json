@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/goit-react-hw-05-movie/static/css/main.cf56fb11.css",
-    "main.js": "/goit-react-hw-05-movie/static/js/main.3d02df69.js",
-    "static/js/368.28233388.chunk.js": "/goit-react-hw-05-movie/static/js/368.28233388.chunk.js",
-    "static/js/539.2240548c.chunk.js": "/goit-react-hw-05-movie/static/js/539.2240548c.chunk.js",
-    "static/js/567.3023ddb6.chunk.js": "/goit-react-hw-05-movie/static/js/567.3023ddb6.chunk.js",
+    "main.js": "/goit-react-hw-05-movie/static/js/main.57585249.js",
+    "static/js/368.d040e46d.chunk.js": "/goit-react-hw-05-movie/static/js/368.d040e46d.chunk.js",
+    "static/js/847.47e97d41.chunk.js": "/goit-react-hw-05-movie/static/js/847.47e97d41.chunk.js",
+    "static/js/752.5587ff20.chunk.js": "/goit-react-hw-05-movie/static/js/752.5587ff20.chunk.js",
     "static/js/217.ae09486f.chunk.js": "/goit-react-hw-05-movie/static/js/217.ae09486f.chunk.js",
     "index.html": "/goit-react-hw-05-movie/index.html",
     "main.cf56fb11.css.map": "/goit-react-hw-05-movie/static/css/main.cf56fb11.css.map",
-    "main.3d02df69.js.map": "/goit-react-hw-05-movie/static/js/main.3d02df69.js.map",
-    "368.28233388.chunk.js.map": "/goit-react-hw-05-movie/static/js/368.28233388.chunk.js.map",
-    "539.2240548c.chunk.js.map": "/goit-react-hw-05-movie/static/js/539.2240548c.chunk.js.map",
-    "567.3023ddb6.chunk.js.map": "/goit-react-hw-05-movie/static/js/567.3023ddb6.chunk.js.map",
+    "main.57585249.js.map": "/goit-react-hw-05-movie/static/js/main.57585249.js.map",
+    "368.d040e46d.chunk.js.map": "/goit-react-hw-05-movie/static/js/368.d040e46d.chunk.js.map",
+    "847.47e97d41.chunk.js.map": "/goit-react-hw-05-movie/static/js/847.47e97d41.chunk.js.map",
+    "752.5587ff20.chunk.js.map": "/goit-react-hw-05-movie/static/js/752.5587ff20.chunk.js.map",
     "217.ae09486f.chunk.js.map": "/goit-react-hw-05-movie/static/js/217.ae09486f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cf56fb11.css",
-    "static/js/main.3d02df69.js"
+    "static/js/main.57585249.js"
   ]
 }
