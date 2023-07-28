@@ -36,7 +36,7 @@ export const Movie = () => {
       <div className="container">
         <NavLink
           className="go-back global-link"
-          to={location.state ? location.state.from : '/'}
+          to={location.state ? location.state.from : '/goit-react-hw-05-movie'}
         >
           <span>&larr;</span> Go Back
         </NavLink>
