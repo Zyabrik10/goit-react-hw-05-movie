@@ -18,18 +18,12 @@ export default function GlobalLayout() {
           <nav>
             <ul className="nav-links-list global-list">
               <li>
-                <StyledLink
-                  className="nav-link global-link"
-                  to="/goit-react-hw-05-movie"
-                >
+                <StyledLink className="nav-link global-link" to="/">
                   Home
                 </StyledLink>
               </li>
               <li>
-                <StyledLink
-                  className="nav-link global-link"
-                  to="/goit-react-hw-05-movie/movies"
-                >
+                <StyledLink className="nav-link global-link" to="/movies">
                   Movies
                 </StyledLink>
               </li>

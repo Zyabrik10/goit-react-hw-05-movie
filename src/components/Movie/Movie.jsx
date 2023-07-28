@@ -36,7 +36,7 @@ export const Movie = () => {
       <div className="container">
         <NavLink
           className="go-back global-link"
-          to={location.state ? location.state.from : '/goit-react-hw-05-movie'}
+          to={location.state ? location.state.from : '/'}
         >
           <span>&larr;</span> Go Back
         </NavLink>
@@ -83,7 +83,7 @@ export const Movie = () => {
             <li>
               <StyleLink
                 className="add-link global-link"
-                to={`/goit-react-hw-05-movie/movies/${id}/cast`}
+                to={`/movies/${id}/cast`}
               >
                 Cast
               </StyleLink>
@@ -91,7 +91,7 @@ export const Movie = () => {
             <li>
               <StyleLink
                 className="add-link global-link"
-                to={`/goit-react-hw-05-movie/movies/${id}/reviews`}
+                to={`/movies/${id}/reviews`}
               >
                 Reviews
               </StyleLink>

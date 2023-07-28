@@ -9,7 +9,7 @@ export default function FilmsListItem({ id, title, poster_path }) {
     <li>
       <NavLink
         className="top-films-link global-link"
-        to={`/goit-react-hw-05-movie/movies/${id}`}
+        to={`/movies/${id}`}
         state={{ from: pathname + search }}
       >
         {poster_path ? (

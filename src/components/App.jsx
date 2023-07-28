@@ -13,7 +13,7 @@ const MovieReviewsComponent = lazy(() =>
 export const App = () => {
   return (
     <Routes>
-      <Route path="/goit-react-hw-05-movie" element={<GlobalComponent />}>
+      <Route path="/" element={<GlobalComponent />}>
         <Route index element={<Home />} />
         <Route path="movies" element={<Movies />} />
         <Route path="movies/:id/" element={<Movie />}>
