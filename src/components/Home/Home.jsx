@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { fetchTopFilms } from '../../js/fetchTopFilms';
+import { fetchTopFilms } from 'js/fetch-film-functions/fetchTopFilms';
 import { FilmsList } from '../FilmsList/FilmsList';
 import NothingFound from 'components/NothingFound/NothingFound';
 import { Loader } from 'components/Loader/Loader';
@@ -19,15 +19,7 @@ export const Home = () => {
         if (results.length === 0) setIsNothingFound(true);
         else setIsNothingFound(false);
 
-        const films = results.map(({ id, title, name, poster_path }) => {
-          return {
-            title: title ? title : name,
-            id,
-            poster_path,
-          };
-        });
-
-        setTopFilms(films);
+        setTopFilms(results);
         setLoadFilms(false);
       })
       .catch(e => {

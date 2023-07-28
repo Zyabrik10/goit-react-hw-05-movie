@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { fetchFilms } from 'js/fetchFilms';
+import { fetchFilms } from 'js/fetch-film-functions/fetchFilms';
 import { useSearchParams } from 'react-router-dom';
 import { FilmsList } from '../FilmsList/FilmsList';
 import { Loader } from 'components/Loader/Loader';

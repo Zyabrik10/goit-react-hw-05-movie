@@ -1,5 +1,5 @@
 import { useLocation, useParams, NavLink, Outlet } from 'react-router-dom';
-import { fetchFilmDetails } from '../../js/fetchFilmDetails';
+import { fetchFilmDetails } from 'js/fetch-film-functions/fetchFilmDetails';
 import { Suspense, useEffect, useState } from 'react';
 import { Loader } from 'components/Loader/Loader';
 import MovieInfo from './MovieInfo';

@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { fetchFilmCreadits } from 'js/fetchFilmCredits';
+import { fetchFilmCreadits } from 'js/fetch-film-functions/fetchFilmCredits';
 import { useEffect, useState } from 'react';
 import NothingFound from 'components/NothingFound/NothingFound';
 import { Loader } from 'components/Loader/Loader';
