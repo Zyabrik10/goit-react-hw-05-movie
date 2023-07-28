@@ -1,4 +1,5 @@
 import FilmsListItem from './FilmsListItem';
+import PropsType from 'props-type';
 
 export const FilmsList = ({ films }) => {
   return (
@@ -15,4 +16,8 @@ export const FilmsList = ({ films }) => {
         : null}
     </ul>
   );
+};
+
+FilmsList.propsType = {
+  films: PropsType.array,
 };

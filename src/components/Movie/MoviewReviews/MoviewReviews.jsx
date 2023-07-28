@@ -1,31 +1,41 @@
 import { useParams } from 'react-router-dom';
 import { fetchFilmReviews } from '../../../js/fetchFilmReviews';
 import { useEffect, useState } from 'react';
-import MovieReviewsItem from './MoviewReviewsItem';
-import { nanoid } from 'nanoid';
+import NothingFound from 'components/NothingFound/NothingFound';
+import { Loader } from 'components/Loader/Loader';
+import MovieReviewsList from './MovieReviewsList';
 
 export default function MovieReviews() {
   const { id } = useParams();
   const [reviews, setReviews] = useState([]);
+  const [isNothingFound, setIsNothingFound] = useState(false);
+  const [loadFilms, setLoadFilms] = useState(false);
 
   useEffect(() => {
+    setLoadFilms(true);
+
     fetchFilmReviews(id)
       .then(({ data }) => {
         const { results } = data;
+
+        if (results.length === 0) setIsNothingFound(true);
+        else setIsNothingFound(false);
+
         setReviews(results);
+        setLoadFilms(false);
       })
-      .catch(console.log);
+      .catch(e => {
+        console.log(e);
+        setLoadFilms(false);
+        setIsNothingFound(true);
+      });
   }, [id]);
 
-  return (
-    <ul className="reviews-list global-list">
-      {reviews.length ? (
-        reviews.map(({ author, content }) => (
-          <MovieReviewsItem key={nanoid()} author={author} content={content} />
-        ))
-      ) : (
-        <p className="global-p">There are no reviews</p>
-      )}
-    </ul>
+  return loadFilms ? (
+    <Loader />
+  ) : isNothingFound ? (
+    <NothingFound message="There is no info😢" />
+  ) : (
+    <MovieReviewsList reviews={reviews} />
   );
 }

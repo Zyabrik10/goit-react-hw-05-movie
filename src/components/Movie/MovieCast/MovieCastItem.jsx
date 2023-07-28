@@ -1,3 +1,5 @@
+import PropsType from 'props-type';
+
 export default function MovieCastItem({ profile_path, name, character }) {
   return (
     <li>
@@ -17,3 +19,9 @@ export default function MovieCastItem({ profile_path, name, character }) {
     </li>
   );
 }
+
+MovieCastItem.propsType = {
+  profile_path: PropsType.string,
+  name: PropsType.string,
+  character: PropsType.string,
+};

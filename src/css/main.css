@@ -1,30 +1,4 @@
-.top-films-link {
-  display: block;
-  height: 100%;
-}
-
-.top-films-link img,
-.poster-placeholder {
-  border-radius: 10px;
-  border: 2px solid #eee;
-}
-
-.top-films-link > .title {
-  margin-top: 10px;
-  color: aquamarine;
-}
-
-.poster-placeholder {
-  width: 100%;
-  height: 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@media screen and (min-width: 748px) {
-  .poster-placeholder {
-    height: 508px;
-  }
+main {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }

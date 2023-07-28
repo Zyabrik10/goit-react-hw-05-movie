@@ -1,36 +1,41 @@
 import { useParams } from 'react-router-dom';
 import { fetchFilmCreadits } from 'js/fetchFilmCredits';
 import { useEffect, useState } from 'react';
-import MovieCastItem from './MovieCastItem';
-import { nanoid } from 'nanoid';
+import NothingFound from 'components/NothingFound/NothingFound';
+import { Loader } from 'components/Loader/Loader';
+import MovieCastList from './MovieCastList';
 
 export default function MovieCast() {
   const { id } = useParams();
   const [credits, setCredits] = useState([]);
+  const [isNothingFound, setIsNothingFound] = useState(false);
+  const [loadFilms, setLoadFilms] = useState(false);
 
   useEffect(() => {
+    setLoadFilms(true);
+
     fetchFilmCreadits(id)
       .then(({ data }) => {
         const { cast } = data;
+
+        if (cast.length === 0) setIsNothingFound(true);
+        else setIsNothingFound(false);
+
         setCredits(cast);
+        setLoadFilms(false);
       })
-      .catch(e => console.log);
+      .catch(e => {
+        console.log(e);
+        setLoadFilms(false);
+        setIsNothingFound(true);
+      });
   }, [id]);
 
-  return (
-    <ul className="cast-list flex-container global-list">
-      {credits.length ? (
-        credits.map(({ profile_path, name, character }) => (
-          <MovieCastItem
-            key={nanoid()}
-            profile_path={profile_path}
-            name={name}
-            character={character}
-          />
-        ))
-      ) : (
-        <p className="global-p">There are no cast</p>
-      )}
-    </ul>
+  return loadFilms ? (
+    <Loader />
+  ) : isNothingFound ? (
+    <NothingFound message="There is no info😢" />
+  ) : (
+    <MovieCastList credits={credits} />
   );
 }

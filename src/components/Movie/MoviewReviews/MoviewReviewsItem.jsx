@@ -1,3 +1,5 @@
+import PropsType from 'props-type';
+
 export default function MovieReviewsItem({ author, content }) {
   return (
     <li>
@@ -6,3 +8,8 @@ export default function MovieReviewsItem({ author, content }) {
     </li>
   );
 }
+
+MovieReviewsItem.propsType = {
+  author: PropsType.string,
+  content: PropsType.string,
+};

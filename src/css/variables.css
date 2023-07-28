@@ -2,4 +2,8 @@
   /* For cell */
   --flex-items: 3;
   --flex-items-gap: 20px;
+
+  /* main styles */
+  --global-radius: 10px;
+  --bright-color: #eee;
 }

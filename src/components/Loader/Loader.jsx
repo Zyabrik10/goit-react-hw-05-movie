@@ -6,7 +6,12 @@ export const Loader = () => (
     width="80"
     color="#4fa94d"
     ariaLabel="bars-loading"
-    wrapperStyle={{}}
+    wrapperStyle={{
+      display: 'block',
+      margin: '0 auto',
+      width: '100%',
+      textAlign: 'center',
+    }}
     wrapperClass=""
     visible={true}
   />

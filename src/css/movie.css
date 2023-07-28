@@ -11,12 +11,12 @@
   transition: background 0.2s ease, color 0.2s ease;
 
   padding: 10px;
-  border-radius: 10px;
+  border-radius: var(--global-radius);
 }
 
 .go-back:hover,
 .add-link:hover {
-  background: #eee;
+  background: var(--bright-color);
   color: #111;
 }
 
@@ -49,7 +49,7 @@
 }
 
 .film-sec-title {
-  color: #eee;
+  color: var(--bright-color);
   font-size: 18px;
 }
 
@@ -65,7 +65,7 @@
 }
 
 .add-info-box {
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--bright-color);
   padding-top: 10px;
 }
 
@@ -81,14 +81,15 @@
   align-items: center;
   flex-shrink: 0;
 
-  border: 1px solid #eee;
+  border: 1px solid var(--bright-color);
+  border-radius: var(--global-radius);
 }
 
 .film-preview {
   display: block;
   margin: 0 auto;
-  border-radius: 10px;
-  border: 2px solid #eee;
+  border-radius: var(--global-radius);
+  border: 2px solid var(--bright-color);
 }
 
 @media screen and (min-width: 748px) {
@@ -112,7 +113,7 @@
 .add-link {
   display: block;
   padding: 10px;
-  border: 1px solid #eee;
+  border: 1px solid var(--bright-color);
 }
 
 /* ACTORS */
@@ -138,7 +139,7 @@
 
   margin-bottom: 10px;
 
-  border-radius: 10px;
+  border-radius: var(--global-radius);
   border: 1px solid #888;
 
   font-size: 18px;
@@ -168,7 +169,7 @@
 
 .reviews-list li {
   padding: 10px;
-  border-radius: 10px;
+  border-radius: var(--global-radius);
   background: #444;
 }
 
@@ -176,7 +177,7 @@
 .review-text {
   padding: 10px;
   background: #666;
-  border-radius: 10px;
+  border-radius: var(--global-radius);
 }
 
 .review-text {
