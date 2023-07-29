@@ -1,9 +1,13 @@
 import { useLocation, useParams, NavLink, Outlet } from 'react-router-dom';
-import { fetchFilmDetails } from 'js/fetch-film-functions/fetchFilmDetails';
+import { fetchFilmDetails } from 'js/fetch-films-func';
 import { Suspense, useEffect, useState } from 'react';
 import { Loader } from 'components/Loader/Loader';
 import MovieInfo from './MovieInfo';
 import NothingFound from 'components/NothingFound/NothingFound';
+
+import styles from 'css/movie.module.css';
+
+const { go_back } = styles;
 
 export const Movie = () => {
   const [film, setFilm] = useState({});
@@ -32,22 +36,24 @@ export const Movie = () => {
       });
   }, [id]);
 
+  function showMovieInfo() {
+    return isNothingFound ? (
+      <NothingFound message="There are no info😢" />
+    ) : (
+      <MovieInfo film={film} />
+    );
+  }
+
   return (
     <section>
       <div className="container">
         <NavLink
-          className="go-back global-link"
-          to={location.state ? location.state.from : '/goit-react-hw-05-movie'}
+          className={`${go_back} global-link`}
+          to={location.state ? location.state.from : '/'}
         >
           <span>&larr;</span> Go Back
         </NavLink>
-        {loadFilms ? (
-          <Loader />
-        ) : isNothingFound ? (
-          <NothingFound message="There are no info😢" />
-        ) : (
-          <MovieInfo film={film} />
-        )}
+        {loadFilms ? <Loader /> : showMovieInfo()}
         <Suspense fallback={<Loader />}>
           <Outlet />
         </Suspense>

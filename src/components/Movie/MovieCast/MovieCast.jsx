@@ -1,9 +1,9 @@
 import { useParams } from 'react-router-dom';
-import { fetchFilmCreadits } from 'js/fetch-film-functions/fetchFilmCredits';
+import { fetchFilmCreadits } from 'js/fetch-films-func';
 import { useEffect, useState } from 'react';
 import NothingFound from 'components/NothingFound/NothingFound';
 import { Loader } from 'components/Loader/Loader';
-import MovieCastList from './MovieCastList';
+import MovieCastList from './MovieCastList/MovieCastList';
 
 export default function MovieCast() {
   const { id } = useParams();

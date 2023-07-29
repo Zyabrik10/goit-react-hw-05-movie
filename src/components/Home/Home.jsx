@@ -1,7 +1,12 @@
 import { useState, useEffect } from 'react';
-import { fetchTopFilms } from 'js/fetch-film-functions/fetchTopFilms';
+import { fetchTopFilms } from 'js/fetch-films-func';
 import { Loader } from 'components/Loader/Loader';
-import { showFilms } from 'js/fetch-film-functions/showFilms';
+import NothingFound from 'components/NothingFound/NothingFound';
+import { FilmsList } from 'components/FilmsList/FilmsList';
+
+import styles from 'css/section.module.css';
+
+const { sec_title } = styles;
 
 export const Home = () => {
   const [topFilms, setTopFilms] = useState([]);
@@ -28,11 +33,19 @@ export const Home = () => {
       });
   }, []);
 
+  function showFilms() {
+    return isNothingFound ? (
+      <NothingFound message="Nothing found😢" />
+    ) : (
+      <FilmsList films={topFilms} />
+    );
+  }
+
   return (
     <section>
       <div className="container">
-        <h2 className="sec-title global-title">Trending today</h2>
-        {loadFilms ? <Loader /> : showFilms(isNothingFound, topFilms)}
+        <h2 className={`${sec_title} global-title`}>Trending today</h2>
+        {loadFilms ? <Loader /> : showFilms()}
       </div>
     </section>
   );

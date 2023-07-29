@@ -1,8 +1,13 @@
 import { useState, useEffect } from 'react';
-import { fetchFilms } from 'js/fetch-film-functions/fetchFilms';
+import { fetchFilms } from 'js/fetch-films-func';
 import { useSearchParams } from 'react-router-dom';
 import { Loader } from 'components/Loader/Loader';
-import { showFilms } from 'js/fetch-film-functions/showFilms';
+import NothingFound from 'components/NothingFound/NothingFound';
+import { FilmsList } from 'components/FilmsList/FilmsList';
+
+import styles from 'css/movies-list.module.css';
+
+const { movies_form } = styles;
 
 export const Movies = () => {
   const [query, setQuery] = useState('');
@@ -46,11 +51,19 @@ export const Movies = () => {
     setParams({ query });
   }
 
+  function showFilms() {
+    return isNothingFound ? (
+      <NothingFound message="Nothing found😢" />
+    ) : (
+      <FilmsList films={films} />
+    );
+  }
+
   return (
     <section>
       <div className="container">
         <form
-          className="movies-form"
+          className={movies_form}
           onSubmit={formHandle}
           action=""
           autoComplete="off"
@@ -58,7 +71,7 @@ export const Movies = () => {
           <input type="text" name="query" placeholder="Batman..." />
           <button className="global-button">search</button>
         </form>
-        {loadFilms ? <Loader /> : showFilms(isNothingFound, films)}
+        {loadFilms ? <Loader /> : showFilms()}
       </div>
     </section>
   );

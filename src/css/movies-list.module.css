@@ -1,4 +1,4 @@
-.movies-form {
+.movies_form {
   margin-bottom: 40px;
 
   display: flex;
@@ -6,9 +6,7 @@
   height: 40px;
 }
 
-.movies-form input {
-  border: none;
-
+.movies_form input {
   border-top-left-radius: var(--global-radius);
   border-bottom-left-radius: var(--global-radius);
 
@@ -27,11 +25,11 @@
   color: var(--bright-color);
 }
 
-.movies-form input:focus {
+.movies_form input:focus {
   border-color: #aaa;
 }
 
-.movies-form button {
+.movies_form button {
   border-top-right-radius: var(--global-radius);
   border-bottom-right-radius: var(--global-radius);
   display: block;

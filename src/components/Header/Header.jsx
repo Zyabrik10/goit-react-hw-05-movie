@@ -1,6 +1,9 @@
 import { NavLink } from 'react-router-dom';
 import { styled } from 'styled-components';
 
+import header_styles from 'css/header.module.css';
+const { nav_links_list } = header_styles;
+
 const StyledLink = styled(NavLink)`
   &.active {
     color: violet;
@@ -9,23 +12,17 @@ const StyledLink = styled(NavLink)`
 
 export default function Header() {
   return (
-    <header>
+    <header className={header_styles.header}>
       <div className="container">
         <nav>
-          <ul className="nav-links-list global-list">
+          <ul className={`${nav_links_list} global-list`}>
             <li>
-              <StyledLink
-                className="nav-link global-link"
-                to="/goit-react-hw-05-movie"
-              >
+              <StyledLink className={`nav-link global-link`} to="/">
                 Home
               </StyledLink>
             </li>
             <li>
-              <StyledLink
-                className="nav-link global-link"
-                to="/goit-react-hw-05-movie/movies"
-              >
+              <StyledLink className={`nav-link global-link`} to="/movies">
                 Movies
               </StyledLink>
             </li>

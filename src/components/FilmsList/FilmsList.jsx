@@ -1,9 +1,9 @@
-import FilmsListItem from './FilmsListItem';
+import FilmsListItem from './FilmsListItem/FilmsListItem';
 import PropsType from 'props-type';
 
 export const FilmsList = ({ films }) => {
   return (
-    <ul className="flex-container top-films-list global-list">
+    <ul className="flex-container global-list">
       {films
         ? films.map(({ id, name, title, poster_path, backdrop_path }) => (
             <FilmsListItem

@@ -1,4 +1,7 @@
 import PropsType from 'props-type';
+import styles from 'css/movie.module.css';
+
+const { actor_preview } = styles;
 
 export default function MovieCastItem({ profile_path, name, character }) {
   return (
@@ -8,10 +11,10 @@ export default function MovieCastItem({ profile_path, name, character }) {
           src={`https://image.tmdb.org/t/p/w500${profile_path}`}
           alt=""
           loading="lazy"
-          className="actor-preview"
+          className={actor_preview}
         />
       ) : (
-        <div className="actor-preview">No image</div>
+        <div className={actor_preview}>No image</div>
       )}
 
       <p className="global-p">{name}</p>

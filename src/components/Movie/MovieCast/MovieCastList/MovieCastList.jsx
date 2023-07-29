@@ -1,10 +1,14 @@
 import PropsType from 'props-type';
-import MovieCastItem from './MovieCastItem';
+import MovieCastItem from './MovieCastItem/MovieCastItem';
 import { nanoid } from 'nanoid';
+
+import styles from 'css/movie.module.css';
+
+const { cast_list } = styles;
 
 export default function MovieCastList({ credits }) {
   return (
-    <ul className="cast-list flex-container global-list">
+    <ul className={`${cast_list} flex-container global-list`}>
       {credits.map(({ profile_path, name, character }) => (
         <MovieCastItem
           key={nanoid()}
