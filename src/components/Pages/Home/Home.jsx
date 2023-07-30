@@ -8,7 +8,7 @@ import styles from 'css/section.module.css';
 
 const { sec_title } = styles;
 
-export const Home = () => {
+export default function Home() {
   const [topFilms, setTopFilms] = useState([]);
   const [isNothingFound, setIsNothingFound] = useState(false);
   const [loadFilms, setLoadFilms] = useState(false);
@@ -20,7 +20,7 @@ export const Home = () => {
       .then(({ data }) => {
         const { results } = data;
 
-        if (!results || !results.length) setIsNothingFound(true);
+        if (!(results || results.length)) setIsNothingFound(true);
         else setIsNothingFound(false);
 
         setTopFilms(results);
@@ -49,4 +49,4 @@ export const Home = () => {
       </div>
     </section>
   );
-};
+}

@@ -1,9 +1,10 @@
-import { api_key } from 'js/api_key';
 import axios from 'axios';
+
+const API_KEY = '20e9251309998a4e0856c5b444d4828a';
 
 export const fetchFilmCreadits = async movie_id => {
   const credits = await axios(
-    `https://api.themoviedb.org/3/movie/${movie_id}/credits?api_key=${api_key}`
+    `https://api.themoviedb.org/3/movie/${movie_id}/credits?api_key=${API_KEY}`
   );
 
   return credits;
@@ -11,7 +12,7 @@ export const fetchFilmCreadits = async movie_id => {
 
 export const fetchFilmDetails = async id => {
   const data = await axios(
-    `https://api.themoviedb.org/3/movie/${id}?api_key=${api_key}`
+    `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`
   );
 
   return data;
@@ -19,7 +20,7 @@ export const fetchFilmDetails = async id => {
 
 export const fetchFilmReviews = async movie_id => {
   const credits = await axios(
-    `https://api.themoviedb.org/3/movie/${movie_id}/reviews?api_key=${api_key}`
+    `https://api.themoviedb.org/3/movie/${movie_id}/reviews?api_key=${API_KEY}`
   );
 
   return credits;
@@ -27,7 +28,7 @@ export const fetchFilmReviews = async movie_id => {
 
 export const fetchFilms = async query => {
   const credits = await axios(
-    `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${query}`
+    `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${query}`
   );
 
   return credits;
@@ -35,7 +36,7 @@ export const fetchFilms = async query => {
 
 export const fetchTopFilms = async path => {
   const data = await axios(
-    `https://api.themoviedb.org/3/trending/all/day?api_key=${api_key}`
+    `https://api.themoviedb.org/3/trending/all/day?api_key=${API_KEY}`
   );
 
   return data;

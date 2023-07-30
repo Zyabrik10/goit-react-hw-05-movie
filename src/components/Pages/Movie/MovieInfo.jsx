@@ -86,7 +86,7 @@ export default function MovieInfo({ film }) {
             <StyleLink
               className={`${add_link} global-link`}
               to={`/movies/${id}/cast`}
-              state={{ from: location.state.from }}
+              state={{ from: location.state ? location.state.from : '/' }}
             >
               Cast
             </StyleLink>
@@ -95,7 +95,7 @@ export default function MovieInfo({ film }) {
             <StyleLink
               className={`${add_link} global-link`}
               to={`/movies/${id}/reviews`}
-              state={{ from: location.state.from }}
+              state={{ from: location.state ? location.state.from : '/' }}
             >
               Reviews
             </StyleLink>

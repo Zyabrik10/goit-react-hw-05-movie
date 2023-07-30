@@ -30,7 +30,7 @@ export const Movies = () => {
       .then(({ data }) => {
         const { results } = data;
 
-        if (!results || !results.length) setIsNothingFound(true);
+        if (!(results || results.length)) setIsNothingFound(true);
         else setIsNothingFound(false);
 
         setFilms(results);

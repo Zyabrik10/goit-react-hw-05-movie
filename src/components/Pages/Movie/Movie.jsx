@@ -50,7 +50,7 @@ export const Movie = () => {
         <NavLink
           className={`${go_back} global-link`}
           to={location.state ? location.state.from : '/'}
-          state={{ from: location.state.from }}
+          state={{ from: location.state ? location.state.from : '/' }}
         >
           <span>&larr;</span> Go Back
         </NavLink>
