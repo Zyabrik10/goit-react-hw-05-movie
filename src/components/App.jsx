@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { Movies } from './Pages/Movies/Movies';
-import { Movie } from './Pages/Movie/Movie';
+import { Movie } from './Pages/MovieDetails/Movie';
 import { lazy } from 'react';
 
 const GlobalComponent = lazy(() => import('./GlobalLayout/GlobalLayout'));
