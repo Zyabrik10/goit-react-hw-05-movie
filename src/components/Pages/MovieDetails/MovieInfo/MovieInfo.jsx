@@ -1,9 +1,8 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import PropsType from 'props-type';
 import { styled } from 'styled-components';
 import NothingFound from 'components/NothingFound/NothingFound';
 import styles from 'css/movie.module.css';
-import { useLocation } from 'react-router-dom';
 
 const {
   add_link,

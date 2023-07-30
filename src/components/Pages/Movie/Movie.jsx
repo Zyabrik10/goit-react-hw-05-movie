@@ -2,7 +2,7 @@ import { useLocation, useParams, NavLink, Outlet } from 'react-router-dom';
 import { fetchFilmDetails } from 'js/fetch-films-func';
 import { Suspense, useEffect, useState } from 'react';
 import { Loader } from 'components/Loader/Loader';
-import MovieInfo from './MovieInfo';
+import MovieInfo from '../MovieDetails/MovieInfo/MovieInfo';
 import NothingFound from 'components/NothingFound/NothingFound';
 
 import styles from 'css/movie.module.css';

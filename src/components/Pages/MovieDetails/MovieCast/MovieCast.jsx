@@ -18,7 +18,7 @@ export default function MovieCast() {
       .then(({ data }) => {
         const { cast } = data;
 
-        if (!(cast || cast.length)) setIsNothingFound(true);
+        if (!cast || !cast.length) setIsNothingFound(true);
         else setIsNothingFound(false);
 
         setCredits(cast);
