@@ -3,6 +3,7 @@ import PropsType from 'props-type';
 import { styled } from 'styled-components';
 import NothingFound from 'components/NothingFound/NothingFound';
 import styles from 'css/movie.module.css';
+import { useLocation } from 'react-router-dom';
 
 const {
   add_link,
@@ -33,6 +34,8 @@ const StyleLink = styled(NavLink)`
 
 export default function MovieInfo({ film }) {
   const { poster_path, title, vote_average, overview, id, genres } = film;
+  const location = useLocation();
+
   return (
     <>
       <div className={films_info_box}>
@@ -83,6 +86,7 @@ export default function MovieInfo({ film }) {
             <StyleLink
               className={`${add_link} global-link`}
               to={`/movies/${id}/cast`}
+              state={{ from: location.state.from }}
             >
               Cast
             </StyleLink>
@@ -91,6 +95,7 @@ export default function MovieInfo({ film }) {
             <StyleLink
               className={`${add_link} global-link`}
               to={`/movies/${id}/reviews`}
+              state={{ from: location.state.from }}
             >
               Reviews
             </StyleLink>

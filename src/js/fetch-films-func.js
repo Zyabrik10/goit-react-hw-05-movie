@@ -1,4 +1,4 @@
-import { api_key } from 'api_key';
+import { api_key } from 'js/api_key';
 import axios from 'axios';
 
 export const fetchFilmCreadits = async movie_id => {

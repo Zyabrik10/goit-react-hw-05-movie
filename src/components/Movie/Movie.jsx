@@ -11,10 +11,11 @@ const { go_back } = styles;
 
 export const Movie = () => {
   const [film, setFilm] = useState({});
-  const { id } = useParams();
-  const location = useLocation();
   const [isNothingFound, setIsNothingFound] = useState(false);
   const [loadFilms, setLoadFilms] = useState(false);
+  const { id } = useParams();
+  const location = useLocation();
+  console.log(location);
 
   useEffect(() => {
     setLoadFilms(true);
@@ -50,6 +51,7 @@ export const Movie = () => {
         <NavLink
           className={`${go_back} global-link`}
           to={location.state ? location.state.from : '/'}
+          state={{ from: location.state.from }}
         >
           <span>&larr;</span> Go Back
         </NavLink>

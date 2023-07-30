@@ -6,14 +6,13 @@ const { top_films_link, poster_placeholder, title: title_style } = styles;
 
 export default function FilmsListItem({ id, title, poster_path }) {
   const location = useLocation();
-  const { search, pathname } = location;
 
   return (
     <li>
       <NavLink
         className={`${top_films_link} global-link`}
         to={`/movies/${id}`}
-        state={{ from: pathname + search }}
+        state={{ from: location }}
       >
         {poster_path ? (
           <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt="" />
