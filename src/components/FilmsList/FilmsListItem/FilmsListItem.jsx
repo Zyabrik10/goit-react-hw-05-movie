@@ -15,7 +15,11 @@ export default function FilmsListItem({ id, title, poster_path }) {
         state={{ from: location }}
       >
         {poster_path ? (
-          <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt="" />
+          <img
+            src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
+            alt=""
+            loading="lazy"
+          />
         ) : (
           <div className={poster_placeholder}>
             <p className="global-b">No image</p>
