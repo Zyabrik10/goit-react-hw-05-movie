@@ -20,7 +20,7 @@ export const Home = () => {
       .then(({ data }) => {
         const { results } = data;
 
-        if (results.length === 0) setIsNothingFound(true);
+        if (!results || !results.length) setIsNothingFound(true);
         else setIsNothingFound(false);
 
         setTopFilms(results);

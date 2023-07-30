@@ -9,14 +9,16 @@ const { cast_list } = styles;
 export default function MovieCastList({ credits }) {
   return (
     <ul className={`${cast_list} flex-container global-list`}>
-      {credits.map(({ profile_path, name, character }) => (
-        <MovieCastItem
-          key={nanoid()}
-          profile_path={profile_path}
-          name={name}
-          character={character}
-        />
-      ))}
+      {credits && credits.length
+        ? credits.map(({ profile_path, name, character }) => (
+            <MovieCastItem
+              key={nanoid()}
+              profile_path={profile_path}
+              name={name}
+              character={character}
+            />
+          ))
+        : null}
     </ul>
   );
 }

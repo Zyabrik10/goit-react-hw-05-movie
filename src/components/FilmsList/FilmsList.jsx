@@ -4,7 +4,7 @@ import PropsType from 'props-type';
 export const FilmsList = ({ films }) => {
   return (
     <ul className="flex-container global-list">
-      {films
+      {films && films.length
         ? films.map(({ id, name, title, poster_path, backdrop_path }) => (
             <FilmsListItem
               key={id}

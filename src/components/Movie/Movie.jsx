@@ -15,7 +15,6 @@ export const Movie = () => {
   const [loadFilms, setLoadFilms] = useState(false);
   const { id } = useParams();
   const location = useLocation();
-  console.log(location);
 
   useEffect(() => {
     setLoadFilms(true);

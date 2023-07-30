@@ -7,9 +7,15 @@ const { reviews_list } = styles;
 export default function MovieReviewsList({ reviews }) {
   return (
     <ul className={`${reviews_list} global-list`}>
-      {reviews.map(({ author, content }) => (
-        <MovieReviewsItem key={nanoid()} author={author} content={content} />
-      ))}
+      {reviews && reviews.length
+        ? reviews.map(({ author, content }) => (
+            <MovieReviewsItem
+              key={nanoid()}
+              author={author}
+              content={content}
+            />
+          ))
+        : null}
     </ul>
   );
 }
