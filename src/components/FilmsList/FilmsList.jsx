@@ -1,23 +1,22 @@
-import FilmsListItem from './FilmsListItem/FilmsListItem';
-import PropsType from 'props-type';
+import { Container, FilmItem } from 'components';
+import { nanoid } from 'nanoid';
+import css from "./FilmsList.module.css";
+import PropTypes from 'prop-types';
 
-export const FilmsList = ({ films }) => {
+export default function FilmsList({ films = [] }) {
   return (
-    <ul className="flex-container global-list">
-      {films && films.length
-        ? films.map(({ id, name, title, poster_path, backdrop_path }) => (
-            <FilmsListItem
-              key={id}
-              id={id}
-              title={title ? title : name}
-              poster_path={poster_path ? poster_path : backdrop_path}
-            />
-          ))
-        : null}
-    </ul>
+    <Container className={css["film-list"]} type="flex">
+      {films?.map(
+        (obj) => {
+          return (
+            <FilmItem key={nanoid()} obj={obj} />
+          );
+        }
+      )}
+    </Container>
   );
-};
+}
 
-FilmsList.propsType = {
-  films: PropsType.array,
-};
+FilmsList.propTypes = {
+  films: PropTypes.array
+}

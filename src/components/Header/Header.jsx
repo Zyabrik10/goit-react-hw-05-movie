@@ -1,34 +1,17 @@
-import { NavLink } from 'react-router-dom';
-import { styled } from 'styled-components';
-
-import header_styles from 'css/header.module.css';
-const { nav_links_list } = header_styles;
-
-const StyledLink = styled(NavLink)`
-  &.active {
-    color: violet;
-  }
-`;
+import Container from 'components/Container/Container';
+import css from './Header.module.css';
+import { Logo } from 'components';
+import Nav from '../Nav/Nav';
+import Other from './Other/Other';
 
 export default function Header() {
   return (
-    <header className={header_styles.header}>
-      <div className="container">
-        <nav>
-          <ul className={`${nav_links_list} global-list`}>
-            <li>
-              <StyledLink className={`nav-link global-link`} to="/">
-                Home
-              </StyledLink>
-            </li>
-            <li>
-              <StyledLink className={`nav-link global-link`} to="/movies">
-                Movies
-              </StyledLink>
-            </li>
-          </ul>
-        </nav>
-      </div>
+    <header className={css['header']}>
+      <Container className={css['header-container']}>
+        <Logo />
+        <Nav />
+        <Other />
+      </Container>
     </header>
   );
 }

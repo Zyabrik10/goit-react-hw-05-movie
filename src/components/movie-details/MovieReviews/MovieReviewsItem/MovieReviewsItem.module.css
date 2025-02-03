@@ -1,0 +1,17 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--color-6);
+
+  border-radius: var(--border-radius);
+}
+
+.review-name,
+.review-text {
+  padding: 10px;
+}
+
+.review-text {
+  line-height: 1.6;
+}

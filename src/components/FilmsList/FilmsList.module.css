@@ -1,0 +1,22 @@
+.film-list{
+    --flex-items: 1;
+    --flex-items-gap: 10px;
+}
+
+@media screen and (min-width: 300px){
+    .film-list{
+        --flex-items: 2;
+    }   
+}
+
+@media screen and (min-width: 768px){
+    .film-list{
+        --flex-items: 4;
+    }   
+}
+
+@media screen and (min-width: 1440px){
+ .film-list{
+    --flex-items: 6;
+ }   
+}

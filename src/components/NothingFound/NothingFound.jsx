@@ -1,21 +1,20 @@
-import PropsType from 'props-type';
-import styles from 'css/nothing-found.module.css';
-
-const { nothing_found_box } = styles;
+import css from './NothingFound.module.css';
+import PropTypes from 'prop-types';
 
 export default function NothingFound({ message, align = 'center' }) {
   return (
     <div
-      className={nothing_found_box}
+      className={css["nothing_found_box"]}
       style={{
         textAlign: align,
       }}
     >
-      <p className="global-p">{message}</p>
+      <p>{message}</p>
     </div>
   );
 }
 
-NothingFound.propsType = {
-  message: PropsType.string,
+NothingFound.propTypes = {
+    message: PropTypes.string,
+    align: PropTypes.string
 };

@@ -1,9 +1,23 @@
-:root {
-  /* For cell */
-  --flex-items: 3;
-  --flex-items-gap: 20px;
+html{
+  --color-1: #ececec;
+  --color-2: #000;
+  --color-3: rgb(254, 253, 255);
+  --color-4: rgb(10, 10, 10, 0.3);
+  --color-5: rgb(15, 149, 35);
+  --color-6: #f3f3f3;
+  --color-7: rgb(11, 109, 26);
+  --color-8: #3c3c3c;
 
-  /* main styles */
-  --global-radius: 10px;
-  --bright-color: #eee;
+  --border-radius: 2px;
+}
+
+html.dark{
+  --color-1: #000;
+  --color-2: #fff;
+  --color-3: rgb(4, 3, 5);
+  --color-4: rgb(244, 244, 244, 0.3);
+  --color-5: rgb(19, 107, 231);
+  --color-6: #0b0a0a;
+  --color-7: rgb(16, 92, 198);
+  --color-8: #b9b9b9;
 }

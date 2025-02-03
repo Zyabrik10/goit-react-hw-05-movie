@@ -1,0 +1,56 @@
+.movies_form {
+  display: flex;
+  height: 40px;
+}
+
+.movies_form input {
+  width: 100%;
+  max-width: 400px;
+
+  background: transparent;
+
+  border: 2px solid #666;
+  outline: none;
+  border-right: none;
+
+  padding: 15px 10px;
+
+  font-size: 20px;
+  color: var(--color-2);
+  
+  transition: border-color 0.3s ease;
+  
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+
+.movies_form input:hover,
+.movies_form input:focus{
+  border-color: #aaa;
+}
+
+.movies_form button {
+  display: block;
+  width: 60px;
+  height: 100%;
+  background: var(--color-5);
+  padding: 0 10px;
+  color: #eee;
+
+  text-transform: capitalize;
+
+  transition: transform 0.3s ease;
+
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+.movies_form button:hover,
+.movies_form button:focus{
+  transform: scale(1.1);
+  transition: transform 0.1s ease;
+}
+
+.movies_form button > svg{
+  fill: currentColor;
+}

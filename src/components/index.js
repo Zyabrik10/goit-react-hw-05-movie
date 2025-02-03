@@ -1,0 +1,16 @@
+export { default as Header } from './Header/Header';
+export { default as Footer } from './Footer/Footer';
+export { default as Container } from './Container/Container';
+export { default as Logo } from './Logo/Logo';
+export { default as ThemeButton } from './ThemeButton/ThemeButton';
+export { default as SectionTitle } from './SectionTitle/SectionTitle';
+export { default as FilmsList } from './FilmsList/FilmsList';
+export { default as FilmItem } from './FilmItem/FilmItem';
+export { default as LocationBack } from './LocationBack/LocationBack';
+export { default as NothingFound } from './NothingFound/NothingFound';
+export { default as Loader } from './Loader/Loader';
+export { default as LoadInfo } from './LoadInfo/LoadInfo';
+export { default as Alert } from './Alert/Alert';
+export { default as SearchMovieForm } from './SearchMovieForm/SearchMovieForm';
+export { default as ImageComponent } from './ImageComponent/ImageComponent';
+export * from './movie-details';

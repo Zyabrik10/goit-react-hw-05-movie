@@ -1,0 +1,32 @@
+.item{
+  height: 100%;
+}
+
+.actor_preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 244px;
+
+  margin-bottom: 10px;
+
+  border: 1px solid #888;
+
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: var(--border-radius);
+}
+
+
+@media screen and (min-width: 748px) {
+  .actor_preview {
+    height: 342px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .actor_preview {
+    height: 328px;
+  }
+}

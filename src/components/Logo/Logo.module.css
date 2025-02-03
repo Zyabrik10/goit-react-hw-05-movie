@@ -1,0 +1,11 @@
+.logo {
+  padding: 1em 0;
+  display: flex;
+  gap: 2px;
+}
+
+.version{
+    font-size: 0.7em;
+    color: var(--color-5);
+    align-self: flex-end;
+}

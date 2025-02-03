@@ -1,0 +1,26 @@
+.section{
+    padding: 15px;
+}
+
+.box{
+    padding: 20px;
+    border-radius: var(--border-radius);
+}
+
+.box.info{
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+}
+
+.box.warning{
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+.box.error{
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}

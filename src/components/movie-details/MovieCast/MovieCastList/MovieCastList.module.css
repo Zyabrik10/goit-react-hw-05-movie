@@ -1,0 +1,15 @@
+.cast_list {
+  --flex-items: 2;
+}
+
+@media screen and (min-width: 768px) {
+  .cast_list {
+    --flex-items: 3;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .cast_list {
+    --flex-items: 6;
+  }
+}
