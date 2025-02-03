@@ -1,15 +1,19 @@
 import { Route, Routes } from 'react-router-dom';
-import { useEffect, lazy } from 'react';
+import { useEffect } from 'react';
+// import { lazy } from 'react';
 
 import "./css/scroll.css";
+import { MainLayout } from 'layouts';
+import { AboutMovie, Home, Movies, PageNotFound } from 'pages';
+import { MovieCast, MovieReviews } from 'components';
 
-const MainLayout = lazy(() => import('./layouts/MainLayout/MainLayout'));
-const Home = lazy(() => import('./pages/Home/Home'));
-const Movies = lazy(() => import('./pages/Movies/Movies'));
-const MovieCast = lazy(() => import('./components/movie-details/MovieCast/MovieCast'));
-const MovieReviews = lazy(() => import('./components/movie-details/MovieReviews/MovieReviews'));
-const AboutMovie = lazy(() => import('./pages/AboutMovie/AboutMovie'));
-const PageNotFoundComponent = lazy(() => import('./pages/PageNotFound/PageNotFound'));
+// const MainLayout = lazy(() => import('./layouts/MainLayout/MainLayout'));
+// const Home = lazy(() => import('./pages/Home/Home'));
+// const Movies = lazy(() => import('./pages/Movies/Movies'));
+// const MovieCast = lazy(() => import('./components/movie-details/MovieCast/MovieCast'));
+// const MovieReviews = lazy(() => import('./components/movie-details/MovieReviews/MovieReviews'));
+// const AboutMovie = lazy(() => import('./pages/AboutMovie/AboutMovie'));
+// const PageNotFoundComponent = lazy(() => import('./pages/PageNotFound/PageNotFound'));
 
 export const App = () => {
   useEffect(() => {
@@ -28,7 +32,7 @@ export const App = () => {
           <Route path="reviews" element={<MovieReviews />} />
         </Route>
       </Route>
-      <Route path="*" element={<PageNotFoundComponent />} />
+      <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
 };
